@@ -7,9 +7,7 @@
     <select id="listStudent" resultType="Student">
         select * from  student
     </select>
-    <!--<select id="listStudent" resultType="Student">-->
-        <!--select * from student order by id desc limit ?,?-->
-    <!--</select>-->
+    
     <select id="getStudent" parameterType="int" resultType="Student">
         select * from   student  where id= #{id}
     </select>
