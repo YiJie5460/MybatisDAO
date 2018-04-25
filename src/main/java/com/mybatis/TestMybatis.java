@@ -11,6 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class TestMybatis {
     public static void main(String[] args) throws IOException {
+
         String resource = "mybatis-config.xml";
         InputStream inputStream = Resources.getResourceAsStream(resource);
         SqlSessionFactory sqlSessionFactory = new
@@ -20,7 +21,7 @@ public class TestMybatis {
         //dao、mapper映射实现。
         StudentDAO dao = session.getMapper(StudentDAO.class);
 
-        Student stu = dao.getStudent(new Long(52));
+        Student stu = dao.getStudent((long)52);
         System.out.println(stu);
 
         session.close();
